@@ -56,7 +56,7 @@
 							</div>
             </li> --}}
 
-						{{-- <li class="nav-item dropdown">
+						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="appsDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								<i data-feather="grid"></i>
 							</a>
@@ -223,7 +223,7 @@
 									<a href="javascript:;">View all</a>
 								</div>
 							</div>
-						</li> --}}
+						</li>
 
               @include('admin.partials.admin_profile')
 					</ul>
