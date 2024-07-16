@@ -230,5 +230,7 @@
 
 	@include('admin.partials.scripts')
 
+  @include('admin.partials.message.toaster')
+
 </body>
 </html>    
