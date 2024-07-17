@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AgentController;
+use App\Http\Controllers\backend\PropertyTypeController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Models\PropertyType;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,13 +19,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/* Route::get('/', function () {
-    return view('index');
-}); */
-
-
-
+//Home route
 Route::get('/',[HomeController::class,'Index'])->name('home.index');
+
+
+// admin login route
+Route::get('/admin/login',[AdminController::class,'AdminLogin'])->name('admin.login');
 
 
 
@@ -60,4 +61,14 @@ Route::middleware(['auth','role:agent'])->group(function(){
 }); // end group agent middleware
 
 
-Route::get('/admin/login',[AdminController::class,'AdminLogin'])->name('admin.login');
+// admin group middleware
+Route::middleware(['auth','role:admin'])->group(function(){
+
+    // Property Type Controller group
+    Route::controller(PropertyTypeController::class)->group(function(){
+        Route::get('/all/type', 'allType')->name('all.type');
+        Route::get('/add/type', 'addType')->name('add.type');
+    });
+
+
+}); // end group admin middleware

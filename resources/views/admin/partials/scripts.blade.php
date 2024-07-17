@@ -15,3 +15,9 @@
 <!-- Custom js for this page -->
 <script src="{{ asset('backend/assets/js/dashboard-dark.js') }}"></script>
 <!-- End custom js for this page -->
+
+<!-- Plugin js for this page -->
+<script src="{{ asset('backend/assets/vendors/datatables.net/jquery.dataTables.js') }}"></script>
+<script src="{{ asset('backend/assets/vendors/datatables.net-bs5/dataTables.bootstrap5.js') }}"></script>
+<script src="{{ asset('backend/assets/js/data-table.js') }}"></script>
+<!-- End plugin js for this page -->

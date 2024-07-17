@@ -35,4 +35,10 @@
 
   {{-- toaster css cdn--}}
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
+
+  	<!-- Plugin css for this page -->
+	  <link rel="stylesheet" href="{{ asset('backend/assets/vendors/datatables.net-bs5/dataTables.bootstrap5.css') }}">
+	<!-- End plugin css for this page -->
+
+
 </head>
