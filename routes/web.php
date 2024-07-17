@@ -68,6 +68,9 @@ Route::middleware(['auth','role:admin'])->group(function(){
     Route::controller(PropertyTypeController::class)->group(function(){
         Route::get('/all/type', 'allType')->name('all.type');
         Route::get('/add/type', 'addType')->name('add.type');
+        Route::post('/store/type', 'storeType')->name('store.type');
+
+        
     });
 
 
