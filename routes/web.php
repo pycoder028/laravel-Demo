@@ -70,8 +70,9 @@ Route::middleware(['auth','role:admin'])->group(function(){
         Route::get('/add/type', 'addType')->name('add.type');
         Route::post('/store/type', 'storeType')->name('store.type');
         Route::get('/edit/type/{id}', 'editType')->name('edit.type');
-        Route::get('/delete/type/{id}', 'deleteType')->name('delete.type');
         Route::post('/update/type', 'updateType')->name('update.type');
+        Route::get('/delete/type/{id}', 'deleteType')->name('delete.type');
+        
         
     });
 

@@ -58,7 +58,7 @@ class PropertyTypeController extends Controller
         ]);
 
         $notification = array(
-            'message' => 'Property Updated Successfully',
+            'message' => 'Property Type Updated Successfully',
             'alert-type' => 'success'
         );
         
@@ -67,7 +67,16 @@ class PropertyTypeController extends Controller
 
     } // end method
 
-    public function deleteType(){
+    public function deleteType($id){
+
+        PropertyType::findOrFail($id)->delete();
+
+        $notification = array(
+            'message' => 'Property Type Deleted Successfully',
+            'alert-type' => 'info'
+        );
+
+        return redirect()->back()->with($notification);
 
     } // end method
     
